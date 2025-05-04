@@ -10,12 +10,12 @@
 <body>
 
   <div class="chat-container">
-    <div class="chat-box" id="chat-box">
+    <div class="chat-box" id="chatMessageBox">
       <div class="bot-message">Tem alguma duvida sobre a Furia? Pergunte algo!</div>
     </div>
 
-    <form id="chatForm" action="/submit" method="post">
-      <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+    <form id="chatFormSubmit" action="/submit" method="post">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem..." autocomplete="off" required />
       <button type="submit">Enviar</button>
     </form>
     

@@ -1,6 +1,6 @@
-const chatForm = document.getElementById('chatForm')
-const chatMessages = document.getElementById('chat-box')
-const chatInput = document.getElementById('chat-input')
+const chatFormSubmit = document.getElementById('chatFormSubmit')
+const chatMessageBox = document.getElementById('chatMessageBox')
+const userInput = document.getElementById('userInput')
 
 // Função para imprimir mensagens no DOM
 function addMessage(sender, text, className) {
@@ -8,26 +8,26 @@ function addMessage(sender, text, className) {
   msg.className = `message ${className}`
   // msg.innerText = text
   msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
-  chatMessages.appendChild(msg)
-  chatMessages.scrollTop = chatMessages.scrollHeight
+  chatMessageBox.appendChild(msg)
+  chatMessageBox.scrollTop = chatMessageBox.scrollHeight
 }
 
 // Evento de envio do formulário
-chatForm.addEventListener('submit', async (e) => {
+chatFormSubmit.addEventListener('submit', async (e) => {
   e.preventDefault()
-  const userMsg = chatInput.value.trim()
-  if (!userMsg) return
+  const userMessage = userInput.value.trim()
+  if (!userMessage) return
   // Adiciona a mensagem do usuário ao chat visualmente
-  addMessage("Você", userMsg, 'user-message')
+  addMessage("Você", userMessage, 'user-message')
   // Limpa o input
-  chatInput.value = ''
+  userInput.value = ''
 
   // Envia a mensagem via POST para a API
   try {
     const response = await fetch('https://chatbot-flask-44as.onrender.com/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userMsg })
+      body: JSON.stringify({ message: userMessage })
     })
     
     const data = await response.json()
