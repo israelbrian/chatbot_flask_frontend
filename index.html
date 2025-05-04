@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot FURIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="bot-message">Tem alguma duvida sobre a Furia? Pergunte algo!</div>
+    </div>
+
+    <form id="chat-form" action="/submit" method="post">
+      <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+      <button type="submit">Enviar</button>
+    </form>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
