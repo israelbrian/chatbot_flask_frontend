@@ -1,4 +1,3 @@
-# chatbot_flask_frontend
 ## Front-end(Versão de teste) da aplicação chatbot furia (feita para fazer requisições HTTP para a api criada em Flask e integrada no render).
 ###  frontend > requisição > backend(api)
 
