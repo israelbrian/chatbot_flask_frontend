@@ -9,3 +9,4 @@ Uma Webpage somente com a interface do chat, porém com o backend feito em pytho
 - Tecnologias usadas <strong>((HTML - CSS - BOOTSTRAP 5 – JAVASCRIPT -  PYTHON – FLASK – POSTMAN - RENDER – GIT – GITHUB).</strong>
 
 <a href="https://chatbot-flask-frontend.vercel.app/">Chatbot Furia Frontend</a>
+<a href="https://github.com/israelbrian/chatbot_flask">Chatbot Furia Backend(API)</a>
